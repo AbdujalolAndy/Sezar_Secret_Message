@@ -50,7 +50,7 @@ async function encodeMessage(decodedText, code){
     return await decodedMessage(message, code);
 }
  
-//Run it
+//Creating async Run function
 async function run(){
     try{
         const decodedText = await decodedMessage(message, code);
@@ -67,7 +67,7 @@ async function run(){
 
 }
 
-
+//Run it catch err if it has
 run()
     .then((result)=>console.log(result))
     .catch((err)=>console.log(err.message));
