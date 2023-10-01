@@ -27,11 +27,8 @@ function decodedMessage(message, code) {
       } else if (index >= alphabet.length) {
         index -= alphabet.length;
       }
-      if (letter === letter.toUpperCase()) {
-        decodedWord += alphabet[index].toUpperCase();
-      } else {
-        decodedWord += alphabet[index];
-      }
+      let new_letter = letter === letter.toUpperCase()? alphabet[index].toUpperCase() : alphabet[index];
+      decodedWord += new_letter;
     }
     result.push(decodedWord);
   });
